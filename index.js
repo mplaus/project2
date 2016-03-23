@@ -12,9 +12,10 @@ app.use(bodyParser.urlencoded({
 app.set('view engine', 'ejs');
 app.use(express.static('public'));
 
+
 app.get('/users', user.list); //list page
 
-app.get('/user/new', user.form); //new action
+app.get('/users/new', user.form); //new action
 app.post('/users', user.create); //new action
 
 app.post('/users/:id', user.update); //edit action

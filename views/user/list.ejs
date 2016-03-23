@@ -8,41 +8,41 @@
     <body>
         <div class="container">
             <div class="row">
-                <h3>Client List</h3>
-                <% if (users.length) { %>
-                <% for (var i in users) { %>
-                <ul class="list-group-item">
-                    <a href="/users/<%= users[i].username %>"><%= users[i].name %></a>
-                    <a href="/users/<%= users[i].job %>"><%= users[i].job %></a>
-                    <a href="/users/<%= users[i].email %>"><%= users[i].email %></a> 
-                </ul>
-                <% } %>
-                <% } else { %>
-                <p>Add Clients</p>
-                <% } %>
-                
+                <div class="col-md-3"></div>
+                <div class="col-md-6"><img class="logo" src="/img/coco-cafe-logo.jpg"/></div>
+                <div class="col-md-3"></div>
+            </div>
+            <div class="row">
+                <div class="col-md-1"></div>
+                <div class="col-md-10">
+                    <h3>Client List</h3>
+                     <div class="panel panel-default">
+                        <div class="panel-heading">
+                            Name
+                            <a href="/users/new"><span class="glyphicon glyphicon-plus"></span></a>
+                        </div>
+                    <% if (users.length) { %>
+                    <% for (var i in users) { %>
+                   
+                        
+                        <div class= "list-group">
+                            <li class="list-group-item">
+                                <a href="/users/<%= users[i].name %>"><%= users[i].name %></a>
+                                <a href="/users/<%= users[i].job %>"><%= users[i].job %></a>
+                                <a href="/users/<%= users[i].email %>"><%= users[i].email %></a>
+                                <a href="/users/delete/<%= users[i].name %>"><span class="glyphicon glyphicon-trash"></span></a>
+                            </li>
+                        </div>
+                        
+                   
+                    <% } %>
+                    <% } else { %>
+                    <p>Add Clients</p>
+                    <% } %>
+                     </div>
+                </div>
+                <div class="col-md-1 side-bars"></div>
             </div>
         </div>
-        <form action="/users" method="POST">
-
-            <p>
-            <label>Name</label>
-            <input type="text" id="name" name="name" value="" />
-            </p>
-
-            <p>
-            <label>Email</label>
-            <input type="text" id="email" name="email" value="" />
-            </p>
-
-            <p>
-            <label>Job</label>
-            <input type="text" id="job" name="job" value="" />
-            </p>
-
-            <button>Create</button>
-
-        </form>
-
     </body>
 </html>

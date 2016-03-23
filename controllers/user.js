@@ -66,8 +66,6 @@ exports.remove = function(req, res) {
 
     //note about xss and sanitization
     collection.removeOne({
-        username: req.params.id
+        name: req.params.id
     });
-
-    return res.redirect('/users');
 };
