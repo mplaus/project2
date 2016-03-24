@@ -32,7 +32,6 @@
                         
                             <% if (users.length) { %>
                             <% for (var i in users) { %>
-                        
                 
                         <div id="flip" class= "list-group">
                             <li class="list-group-item">
@@ -40,7 +39,8 @@
                                 <a href="/users/<%= users[i].name %>"><%= users[i].name %></a>
                                 <a href="/users/<%= users[i].job %>"><%= users[i].job %></a>
                                 <a href="/users/<%= users[i].email %>"><%= users[i].email %></a>
-                                <a href="/users/delete/<%= users[i].identity %>"><span class="glyphicon glyphicon-trash"></span></a>
+                                <a href="/users/<%= users[i].coffee %>"><%= users[i].coffee %></a>
+                                <a href="/user/delete/<%= users[i].identity %>"><span class="glyphicon glyphicon-trash"></span></a>
                             </li>
                         </div>
                         <div id="panel">Hello World</div>

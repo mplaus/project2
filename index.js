@@ -21,7 +21,7 @@ app.post('/users', user.create); //new action
 app.post('/users/:id', user.update); //edit action
 app.get('/users/:id', user.show); //edit form
 
-app.get('/users/delete/:id', user.remove); //delete action
+app.get('/user/delete/:id', user.remove); //delete action
 
 db.connect('mongodb://localhost:27017/test', function(err) {
     console.log("MongoDB connected...");
