@@ -4,8 +4,16 @@
         <title>Home Page</title>
         <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css"/>
         <link rel="stylesheet" type="text/css" href="/css/myStyle.css"/>
+        <script src="/js/jquery-1.12.2.min.js"></script>
     </head>
     <body>
+        <script> 
+        $(document).ready(function(){
+            $("#flip").click(function(){
+                $("#panel").slideToggle("slow");
+            });
+        });
+        </script>
         <div class="container">
             <div class="row">
                 <div class="col-md-3"></div>
@@ -21,24 +29,26 @@
                             Name
                             <a href="/users/new"><span class="glyphicon glyphicon-plus"></span></a>
                         </div>
-                    <% if (users.length) { %>
-                    <% for (var i in users) { %>
-                   
                         
-                        <div class= "list-group">
+                            <% if (users.length) { %>
+                            <% for (var i in users) { %>
+                        
+                
+                        <div id="flip" class= "list-group">
                             <li class="list-group-item">
+                                <a href="/users/<%= users[i].identity %>"><%= users[i].identity %></a>
                                 <a href="/users/<%= users[i].name %>"><%= users[i].name %></a>
                                 <a href="/users/<%= users[i].job %>"><%= users[i].job %></a>
                                 <a href="/users/<%= users[i].email %>"><%= users[i].email %></a>
-                                <a href="/users/delete/<%= users[i].name %>"><span class="glyphicon glyphicon-trash"></span></a>
+                                <a href="/users/delete/<%= users[i].identity %>"><span class="glyphicon glyphicon-trash"></span></a>
                             </li>
                         </div>
-                        
+                        <div id="panel">Hello World</div>
                    
-                    <% } %>
-                    <% } else { %>
-                    <p>Add Clients</p>
-                    <% } %>
+                            <% } %>
+                            <% } else { %>
+                            <p>Add Clients</p>
+                            <% } %>
                      </div>
                 </div>
                 <div class="col-md-1 side-bars"></div>

@@ -31,7 +31,8 @@ exports.update = function(req, res) {
                 city: req.body.city,
                 state: req.body.state,
                 zip: req.body.zip,
-                notes: req.body.notes
+                notes: req.body.notes,
+                identity: req.body.identity
             }
         }
     );
@@ -55,7 +56,8 @@ exports.create = function(req, res) {
                 city: req.body.city,
                 state: req.body.state,
                 zip: req.body.zip,
-                notes: req.body.notes
+                notes: req.body.notes,
+                identity: req.body.identity
     });
 
     res.redirect('/users');
@@ -68,4 +70,6 @@ exports.remove = function(req, res) {
     collection.removeOne({
         name: req.params.id
     });
+
+    return res.redirect('/users');
 };
