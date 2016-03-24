@@ -23,27 +23,40 @@
             <div class="row">
                 <div class="col-md-1"></div>
                 <div class="col-md-10">
-                    <h3>Client List</h3>
-                     <div class="panel panel-default">
-                        <div class="panel-heading">
-                            Name
-                            <a href="/users/new"><span class="glyphicon glyphicon-plus"></span></a>
-                        </div>
-                        
+                    <h3>Customer List</h3>
                             <% if (users.length) { %>
                             <% for (var i in users) { %>
+                     <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <span>Customer Number: </span><span href="/users/<%= users[i].identity %>"><%= users[i].identity %></span>
+                                </div>
+                                <div class="col-md-3">
+                                    <span>Name: </span><span href="/users/<%= users[i].name %>"><%= users[i].name %></span>
+                                </div>
+                                <div class="col-md-4">
+                                    <span>email: </span><span href="/users/<%= users[i].email %>"><%= users[i].email %></span>
+                                </div>
+                                <div class = "col-md-1">
+                                    <a href="/users/new"><span class="glyphicon glyphicon-plus my-glyphs"></span></a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                           
                 
-                        <div id="flip" class= "list-group">
+                        <div id="flip<% users[i].identity %>" class= "list-group">
                             <li class="list-group-item">
-                                <a href="/users/<%= users[i].identity %>"><%= users[i].identity %></a>
-                                <a href="/users/<%= users[i].name %>"><%= users[i].name %></a>
-                                <a href="/users/<%= users[i].job %>"><%= users[i].job %></a>
-                                <a href="/users/<%= users[i].email %>"><%= users[i].email %></a>
-                                <a href="/users/<%= users[i].coffee %>"><%= users[i].coffee %></a>
-                                <a href="/user/delete/<%= users[i].identity %>"><span class="glyphicon glyphicon-trash"></span></a>
+                                
+                                <p href="/users/<%= users[i].job %>"><%= users[i].job %></p>
+                                <p href="/users/<%= users[i].email %>"><%= users[i].email %></p>
+                                <p href="/users/<%= users[i].coffee %>"><%= users[i].coffee %></p>
+                                <a href="/user/delete/<%= users[i].identity %>"><span class="glyphicon glyphicon-trash my-glyphs"></span></a>
+                                <a href="/users/<%= users[i].identity %>"><input  type="submit" class="btn btn-default" value="Edit" /></a>
+                                
                             </li>
                         </div>
-                        <div id="panel">Hello World</div>
                    
                             <% } %>
                             <% } else { %>
