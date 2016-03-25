@@ -10,9 +10,24 @@ body {
     margin-left: 10px;
 }
 
-.my-image{
-   width: 150px;
-   height: auto;
+.big-heading{
+    font-family: open-sans-bold;
+    font-size: 40px;
+}
+.container {
+    background-color: white;
+}
+
+.customer-body{
+    font-family: open-sans-regular;
+}
+
+.demographics{
+    margin-left: 1px;
+}
+
+.headings{
+    font-family: open-sans-bold;
 }
 
 .my-button{
@@ -20,21 +35,18 @@ body {
      margin-top: 10px;
      color: black;
      background-color: white;
-}
-.container {
-    background-color: white;
-}
-.headings{
-    font-family: open-sans-bold;
+     margin-bottom: 20px;
 }
 
-.big-heading{
-    font-family: open-sans-bold;
-    font-size: 40px;
+.my-image{
+   width: 150px;
+   height: auto;
 }
-.customer-body{
-    font-family: open-sans-regular;
+
+.my-glyphs {
+    color: black;
 }
+
 .side-bar {
     background-color: #2B0F0E;
     width: 50px;
@@ -42,19 +54,10 @@ body {
     float: left;
 }
 
-.my-glyphs {
-    color: black;
-}
-.my-button {
-    margin-bottom: 20px;
-}
-
 .top-button {
     margin-top: 30px;
 }
-.demographics{
-    margin-left: 1px;
-}
+
 @font-face{
     font-family: "open-sans-regular";
     src: url('../fonts/Open_Sans/OpenSans-Regular.ttf');
