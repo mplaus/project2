@@ -42,7 +42,12 @@ body {
     margin-bottom: 20px;
 }
 
-
+.top-button {
+    margin-top: 30px;
+}
+.demographics{
+    margin-left: 1px;
+}
 @font-face{
     font-family: "open-sans-regular";
     src: url('../fonts/Open_Sans/OpenSans-Regular.ttf');

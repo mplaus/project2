@@ -23,7 +23,15 @@
             <div class="row">
                 <div class="col-md-1"></div>
                 <div class="col-md-10">
-                    <h3 class="big-heading">Customer List</h3>
+                    <div class="row">
+                        <div class="col-md-5">
+                            <h3 class="big-heading">Customer List</h3>
+                        </div>
+                        <div class="col-md-4"></div>
+                        <div class="col-md-3">
+                            <a href="/users/new"><input type="New Customer" class="btn btn-default  my-button top-button" value="Add Customer" /></a>
+                        </div>
+                    </div>
                             <% if (users.length) { %>
                             <% for (var i in users) { %>
                      <div class="panel panel-default">
@@ -32,14 +40,11 @@
                                 <div class="col-md-4 col-sm-4">
                                     <span class="headings">Customer Number: </span><span href="/users/<%= users[i].identity %>"><%= users[i].identity %></span>
                                 </div>
-                                <div class="col-md-3 col-sm-3">
+                                <div class="col-md-5 col-sm-4">
                                     <span class="headings">Name: </span><span href="/users/<%= users[i].name %>"><%= users[i].name %></span>
                                 </div>
-                                <div class="col-md-4 col-sm-4">
+                                <div class="col-md-3 col-sm-4">
                                     <span class="headings">Email: </span><span href="/users/<%= users[i].email %>"><%= users[i].email %></span>
-                                </div>
-                                <div class = "col-md-1 col-sm-1">
-                                    <a href="/users/new"><span class="glyphicon glyphicon-plus my-glyphs"></span></a>
                                 </div>
                             </div>
                         </div>
@@ -56,11 +61,6 @@
                                             </div>
                                         </div>
                                         <div class="row">
-                                            <div class="col-md-12">
-                                                <img class="my-image" src="/img/<%= users[i].coffee %>.png"/>
-                                            </div>
-                                        </div>
-                                        <div class="row">
                                             <div class="col-md-4 col-sm-4 col-xs-4">
                                                 <span class="headings">Milk: </span><span href="/users/<%= users[i].milk %>"><%= users[i].milk %></span>
                                             </div>
@@ -71,15 +71,23 @@
                                                 <span class="headings">Cream: </span><span href="/users/<%= users[i].cream %>"><%= users[i].cream %></span>
                                             </div>
                                         </div>
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <img class="my-image center-block" src="/img/<%= users[i].coffee %>.png"/>
+                                            </div>
+                                        </div>
+                                        
                                     </div>
                                     <div class="col-md-6">
+                                        <div class="row demographics">
                                         <span class="headings">Occupation:</span><div href="/users/<%= users[i].job %>"><%= users[i].job %></div>
                                         <div class="headings">Address:</div>
                                         <div href="/users/<%= users[i].address %>"><%= users[i].address %></div>
                                         <span href="/users/<%= users[i].city %>"><%= users[i].city %>,</span>
                                         <span href="/users/<%= users[i].state %>"><%= users[i].state %>,</span>
-                                       <span href="/users/<%= users[i].zip %>"><%= users[i].zip %></span>
+                                        <span href="/users/<%= users[i].zip %>"><%= users[i].zip %></span>
                                         <div class="headings">Notes:</div><div href="/users/<%= users[i].notes %>"><%= users[i].notes %></div>
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="row">
@@ -99,8 +107,8 @@
                             <% } %>
                             <% } else { %>
                             <div class="row">
-                                <div class="col-md-4 col-sm-5 col-xs-9">
-                                    <a href="/users/new"><input type="submit" class="btn btn-block  my-button" value="Add Clients" /></a>
+                                <div class="col-md-5 col-sm-5 col-xs-9">
+                                    <h2>Add Customers Here</h2>
                                 </div>
                                 <div class="col-md-8 col-sm-7 col-xs-3"></div>
                             </div>
