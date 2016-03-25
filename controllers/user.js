@@ -33,7 +33,10 @@ exports.update = function(req, res) {
                 state: req.body.state,
                 zip: req.body.zip,
                 notes: req.body.notes,
-                identity: req.body.identity
+                identity: req.body.identity,
+                milk: req.body.milk,
+                sugar: req.body.sugar,
+                cream: req.body.cream
             }
         }
     );
@@ -56,8 +59,13 @@ exports.create = function(req, res) {
         coffee: req.body.coffee,
         address: req.body.address,
         city: req.body.city,
+        state: req.body.state,
+        zip: req.body.zip,
         notes: req.body.notes,
-        identity: req.body.identity
+        identity: req.body.identity,
+        milk: req.body.milk,
+        sugar: req.body.sugar,
+        cream: req.body.cream
     });
 
     res.redirect('/users');

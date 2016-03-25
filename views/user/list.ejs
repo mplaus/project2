@@ -17,28 +17,28 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-3"></div>
-                <div class="col-md-6"><img class="logo" src="/img/coco-cafe-logo.jpg"/></div>
+                <div class="col-md-6"><img class="logo center-block" src="/img/coco-cafe-logo.jpg"/></div>
                 <div class="col-md-3"></div>
             </div>
             <div class="row">
                 <div class="col-md-1"></div>
                 <div class="col-md-10">
-                    <h3 class="headings">Customer List</h3>
+                    <h3 class="big-heading">Customer List</h3>
                             <% if (users.length) { %>
                             <% for (var i in users) { %>
                      <div class="panel panel-default">
                         <div class="panel-heading customer-body">
                             <div class="row">
-                                <div class="col-md-4">
+                                <div class="col-md-4 col-sm-4">
                                     <span class="headings">Customer Number: </span><span href="/users/<%= users[i].identity %>"><%= users[i].identity %></span>
                                 </div>
-                                <div class="col-md-3">
+                                <div class="col-md-3 col-sm-3">
                                     <span class="headings">Name: </span><span href="/users/<%= users[i].name %>"><%= users[i].name %></span>
                                 </div>
-                                <div class="col-md-4">
+                                <div class="col-md-4 col-sm-4">
                                     <span class="headings">Email: </span><span href="/users/<%= users[i].email %>"><%= users[i].email %></span>
                                 </div>
-                                <div class = "col-md-1">
+                                <div class = "col-md-1 col-sm-1">
                                     <a href="/users/new"><span class="glyphicon glyphicon-plus my-glyphs"></span></a>
                                 </div>
                             </div>
@@ -50,23 +50,45 @@
                             <li class="list-group-item">
                                 <div class="row">
                                     <div class="col-md-6">
-                                        <p href="/users/<%= users[i].coffee %>"><%= users[i].coffee %></p>
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <span class="headings">Favorite Coffee:</span><p href="/users/<%= users[i].coffee %>"><%= users[i].coffee %></p>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <img class="my-image" src="/img/<%= users[i].coffee %>.png"/>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-4 col-sm-4 col-xs-4">
+                                                <span class="headings">Milk: </span><span href="/users/<%= users[i].milk %>"><%= users[i].milk %></span>
+                                            </div>
+                                            <div class="col-md-4 col-sm-4 col-xs-4">
+                                                <span class="headings">Sugar: </span><span href="/users/<%= users[i].sugar %>"><%= users[i].sugar %></span>
+                                            </div>
+                                            <div class="col-md-4 col-sm-4 col-xs-4">
+                                                <span class="headings">Cream: </span><span href="/users/<%= users[i].cream %>"><%= users[i].cream %></span>
+                                            </div>
+                                        </div>
                                     </div>
                                     <div class="col-md-6">
-                                        <p href="/users/<%= users[i].job %>"><%= users[i].job %></p>
-                                        <p href="/users/<%= users[i].adress %>"><%= users[i].address %></p>
-                                        <p href="/users/<%= users[i].city %>"><%= users[i].city %></p>
-                                        <p href="/users/<%= users[i].zip %>"><%= users[i].zip %></p>
-                                        <p href="/users/<%= users[i].notes %>"><%= users[i].notes %></p>
+                                        <span class="headings">Occupation:</span><div href="/users/<%= users[i].job %>"><%= users[i].job %></div>
+                                        <div class="headings">Address:</div>
+                                        <div href="/users/<%= users[i].address %>"><%= users[i].address %></div>
+                                        <span href="/users/<%= users[i].city %>"><%= users[i].city %>,</span>
+                                        <span href="/users/<%= users[i].state %>"><%= users[i].state %>,</span>
+                                       <span href="/users/<%= users[i].zip %>"><%= users[i].zip %></span>
+                                        <div class="headings">Notes:</div><div href="/users/<%= users[i].notes %>"><%= users[i].notes %></div>
                                     </div>
                                 </div>
                                 <div class="row">
-                                    <div class="col-md-2">
-                                        <a href="/user/delete/<%= users[i].identity %>"><span class="glyphicon glyphicon-trash my-glyphs"></span></a>
+                                    <div class="col-md-2 col-sm-2 col-xs-2">
+                                        <a href="/user/delete/<%= users[i].identity %>"><input  type="submit" class="btn btn-default my-button" value="Delete" /></a>
                                     </div>
-                                    <div class="col-md-8"></div>
-                                    <div class="col-md-2">
-                                        <a href="/users/<%= users[i].identity %>"><input  type="submit" class="btn btn-default" value="Edit" /></a>
+                                    <div class="col-md-8 col-sm-8 col-xs-7"></div>
+                                    <div class="col-md-2 col-sm-2 col-xs-2">
+                                        <a href="/users/<%= users[i].identity %>"><input  type="submit" class="btn btn-default my-button" value="Edit" /></a>
                                     </div>
                                 </div>
                                 
@@ -76,7 +98,12 @@
                    
                             <% } %>
                             <% } else { %>
-                            <a href="/users/new"><input type="submit" class="btn btn-default my-button" value="Add Clients" /></a>
+                            <div class="row">
+                                <div class="col-md-4 col-sm-5 col-xs-9">
+                                    <a href="/users/new"><input type="submit" class="btn btn-block  my-button" value="Add Clients" /></a>
+                                </div>
+                                <div class="col-md-8 col-sm-7 col-xs-3"></div>
+                            </div>
                             <% } %>
                      </div>
                 </div>

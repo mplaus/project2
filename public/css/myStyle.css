@@ -1,12 +1,29 @@
 body {
-    background-color: #2B0F0E;
+    background-color: #4c3e31;
     font-family: open-sans-regular;
+}
+
+.my-image{
+   width: 150px;
+   height: auto;
+}
+
+.my-button{
+     border-color: #4c3e31;
+     margin-top: 10px;
+     color: black;
+     background-color: white;
 }
 .container {
     background-color: white;
 }
 .headings{
     font-family: open-sans-bold;
+}
+
+.big-heading{
+    font-family: open-sans-bold;
+    font-size: 40px;
 }
 .customer-body{
     font-family: open-sans-regular;
