@@ -55,7 +55,7 @@ exports.create = function(req, res) {
         email: req.body.email,
         coffee: req.body.coffee,
         address: req.body.address,
-        city: req.body.coffee,
+        city: req.body.city,
         notes: req.body.notes,
         identity: req.body.identity
     });

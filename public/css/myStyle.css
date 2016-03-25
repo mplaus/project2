@@ -1,8 +1,15 @@
 body {
     background-color: #2B0F0E;
+    font-family: open-sans-regular;
 }
 .container {
     background-color: white;
+}
+.headings{
+    font-family: open-sans-bold;
+}
+.customer-body{
+    font-family: open-sans-regular;
 }
 .side-bar {
     background-color: #2B0F0E;
@@ -13,4 +20,17 @@ body {
 
 .my-glyphs {
     color: black;
+}
+.my-button {
+    margin-bottom: 20px;
+}
+
+
+@font-face{
+    font-family: "open-sans-regular";
+    src: url('../fonts/Open_Sans/OpenSans-Regular.ttf');
+}
+@font-face{
+    font-family: "open-sans-bold";
+    src: url('../fonts/Open_Sans/OpenSans-Bold.ttf');
 }
