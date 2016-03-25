@@ -3,6 +3,13 @@ body {
     font-family: open-sans-regular;
 }
 
+#footer{
+    margin-top: 100px;
+    background-color: white;
+    padding-top: 5px;
+    margin-left: 10px;
+}
+
 .my-image{
    width: 150px;
    height: auto;
@@ -56,3 +63,4 @@ body {
     font-family: "open-sans-bold";
     src: url('../fonts/Open_Sans/OpenSans-Bold.ttf');
 }
+
